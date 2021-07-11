@@ -10,13 +10,21 @@ module.exports = {
     '/ru/': {
       lang: 'ru',
       title: 'Паттерны Vue',
-      description: 'Полезные паттерны, методы, советы и рекомендации, а также тщательно подобранный список ссылок по Vue'
+      description:
+        'Полезные паттерны, методы, советы и рекомендации, а также тщательно подобранный список ссылок по Vue',
     },
     '/es/': {
       lang: 'es',
       title: 'Patrones de Vue',
-      description: 'Patrones útiles de Vue, técnicas, consejos, trucos y enlaces seleccionados.'
-    }
+      description:
+        'Patrones útiles de Vue, técnicas, consejos, trucos y enlaces seleccionados.',
+    },
+    '/id/': {
+      lang: 'id',
+      title: 'Pola Vue',
+      description:
+        'Pola Vue yang berguna, tips, trik dan link akurat yang sangat membantu ',
+    },
   },
   head: [
     [
@@ -138,15 +146,15 @@ module.exports = {
       '@vuepress/pwa',
       {
         serviceWorker: true,
-        updatePopup: true
-      }
+        updatePopup: true,
+      },
     ],
     [
       '@vuepress/google-analytics',
       {
-        'ga': 'UA-175336794-1'
-      }
-    ]
+        ga: 'UA-175336794-1',
+      },
+    ],
   ],
   themeConfig: {
     displayAllHeaders: true,
@@ -237,6 +245,35 @@ module.exports = {
           ['/es/useful-links/', 'Enlaces útiles'],
           ['/es/sponsors/', 'Libro Fullstack Vue'],
           ['/es/translations/', 'Traducciones'],
+        ],
+      },
+      '/id/': {
+        label: 'Indonesian',
+        selectText: 'Bahasa',
+        lastUpdated: 'Pembaharuan Terakhir',
+        editLinkText: 'Edit halaman ini di GitHub',
+        nav: [
+          { text: 'Mulai', link: '/id/' },
+          { text: 'Panduan', link: '/id/patterns/' },
+          {
+            text: 'Terjemahan',
+            items: [
+              {
+                text: '简体中文',
+                link: 'https://github.com/ZYSzys/vue-patterns-cn',
+              },
+              {
+                text: '繁體中文',
+                link: 'https://github.com/yoyoys/vue-patterns-cht',
+              },
+            ],
+          },
+        ],
+        sidebar: [
+          ['/id/patterns/', 'Pola'],
+          ['/id/useful-links/', 'Tautan Bermanfaat'],
+          ['/id/sponsors/', 'Buku Fullstack Vue'],
+          ['/id/translations/', 'Terjemahan'],
         ],
       },
     },
